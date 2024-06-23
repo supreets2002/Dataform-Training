@@ -1,0 +1,27 @@
+config {
+  type: "table",
+  schema: "dataform",
+  name: "students"
+}
+
+select * from (select
+    1 as id, "Supreet" as first_name, "Birajdar" as last_name, 85 as mark, "A" as grade
+union all select
+    2 as id, "Niketan" as first_name, "Swami" as last_name, 92 as mark, "A" as grade
+union all select
+    3 as id, "Stuti" as first_name, "Gujarathi" as last_name, 76 as mark, "B" as grade
+union all select
+    4 as id, "Aman" as first_name, "Gupta" as last_name, 67 as mark, "C" as grade
+union all select
+    5 as id, "Akanksha" as first_name, "Chopade" as last_name, 54 as mark, "D" as grade
+union all select
+    6 as id, "Rahul" as first_name, "Sharma" as last_name, 81 as mark, "B" as grade
+union all select
+    7 as id, "Ganesh" as first_name, "saran" as last_name, 48 as mark, "F" as grade
+union all select
+    8 as id, "john" as first_name, "mill" as last_name, 59 as mark, "D" as grade
+union all select
+    9 as id, "disha" as first_name, "dalvi" as last_name, 73 as mark, "C" as grade
+union all select
+    10 as id, "swarupa" as first_name, "patil" as last_name, 88 as mark, "A" as grade
+)
