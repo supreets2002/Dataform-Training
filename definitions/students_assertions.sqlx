@@ -1,0 +1,11 @@
+
+config {
+  type: "assertion",
+  schema: "dataform_assertions",
+  name: "students_unique_id"
+}
+
+select id, count(*) as row_count
+from ${ref("students")}
+group by id
+having count(*) > 1

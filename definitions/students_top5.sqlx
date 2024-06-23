@@ -1,0 +1,10 @@
+config {
+  type: "view",
+  schema: "dataform",
+  name: "students_top5"
+}
+
+select id, first_name, last_name, mark, grade
+from ${ref("students")}
+order by id
+limit 5

@@ -1,0 +1,9 @@
+config {
+  type: "assertion",
+  schema: "dataform_assertions",
+  name: "students_id_positive"
+}
+
+select id
+from ${ref("students")}
+where id <= 0
